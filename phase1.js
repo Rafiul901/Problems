@@ -5,4 +5,50 @@ if(num%2 ===0){
 }
 else return "odd"
 }
-console.log(isEvenOrOdd('78'));
+
+//2. Find the maximum of two numbers
+function findMaximum(num1,num2){
+    if(num1<num2){
+        return num2
+    }
+    else return num1
+}
+
+//3. Find the maximum of three numbers 
+function findMaximumOfThree(num1,num2,num3){
+return Math.max(num1,num2,num3)
+}
+
+
+//4. Check if a year is a leap year  
+function isLeapYear(year){
+if(year%400 ===0){
+    return true;
+}
+if(year%100 ===0){
+    return false;
+}
+if(year%4 ===0){
+    return true;
+}
+else return false
+}
+
+//5. Print numbers from 1 to N 
+function isPrint(n){
+for( let i=1; i<=n; i++)
+    console.log(i);
+}
+
+
+
+//6. Print numbers from N to 1 
+function isThere(n){
+    let number =[]
+    for(let i=n; i>=1; i--){
+        number.push(i)
+    }
+    return number
+}
+
+// 8. Factorial of a number (loop) 
