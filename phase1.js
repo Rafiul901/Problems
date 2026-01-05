@@ -51,4 +51,22 @@ function isThere(n){
     return number
 }
 
-// 8. Factorial of a number (loop) 
+// 7. Sum of numbers from 1 to N  
+ function sumOfNum(n){
+    let sum=0;
+    for(let i=1; i<=n;i++){
+        sum+=i;
+    }
+    return sum;
+ }
+
+
+//8. Factorial of a number (loop) 
+function factorial (n){
+    let factNum =1;
+    for(let i=1; i<=n; i++){
+        factNum*=i
+    }
+    return factNum
+}
+console.log(factorial(5));
