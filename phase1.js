@@ -69,4 +69,16 @@ function factorial (n){
     }
     return factNum
 }
-console.log(factorial(5));
+
+
+//9. Count digits of a number
+function countDigit (n){
+let str =n.toString();
+return str.length
+}
+
+//10. Reverse a number
+function reverseNum(n){
+    return Number(n.toString().split('').reverse().join(''))
+}
+console.log(reverseNum(123));
