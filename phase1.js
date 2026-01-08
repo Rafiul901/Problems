@@ -81,4 +81,14 @@ return str.length
 function reverseNum(n){
     return Number(n.toString().split('').reverse().join(''))
 }
-console.log(reverseNum(123));
+
+
+//14. Sum of digits 
+function sumOfDigits(n){
+    let sum =0;
+    for(i=1; i<n.length; i++){
+       sum+=n(i) 
+    }
+    return sum;
+}
+console.log(sumOfDigits(123));
