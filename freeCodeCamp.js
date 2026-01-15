@@ -128,3 +128,18 @@ console.log(duplexLoanMsg);
 console.log(condoLoanMsg);
 console.log(carLoanMsg);
 console.log(noLoanMsg);
+
+//Build an Email Masker
+function maskEmail(email){
+  const atIndex = email.indexOf('@');
+
+  const local = email.slice(0,atIndex);
+  const domain = email.slice(atIndex);
+
+  const masked = local[0]+'*'.repeat(local.length -2)+ local[local.length-1];
+  return masked+domain;
+
+
+}
+let email = "apple.pie@example.com";
+ console.log(maskEmail(email));
