@@ -142,4 +142,4 @@ function maskEmail(email){
 
 }
 let email = "apple.pie@example.com";
- console.log(maskEmail(email));
+ console.log(maskEmail());
