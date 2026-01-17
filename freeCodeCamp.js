@@ -142,4 +142,32 @@ function maskEmail(email){
 
 }
 let email = "apple.pie@example.com";
- console.log(maskEmail());
+ console.log(maskEmail(email));
+
+ //Card Counting Assistant
+
+ // Global variable
+let count = 0;
+
+// Function definition
+function cardCounter(card) {
+  // Increase count for low cards (2–6)
+  if (card >= 2 && card <= 6) {
+    count++;
+  }
+  // No change for neutral cards (7–9)
+  else if (card >= 7 && card <= 9) {
+    // Do nothing
+  }
+  // Decrease count for high cards (10, J, Q, K, A)
+  else if (card === 10 || card === "J" || card === "Q" || card === "K" || card === "A") {
+    count--;
+  }
+
+  // Decision: Bet if count > 0, Hold otherwise
+  if (count > 0) {
+    return count + " Bet";
+  } else {
+    return count + " Hold";
+  }
+}
