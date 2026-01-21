@@ -1,0 +1,19 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    overflow: hidden;
+}
+#runBtn{
+    position: absolute;
+    padding: 15px 30px;
+    font-size:20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: #ff4757;
+    color: white;
+    transition: 0.2s;
+}
