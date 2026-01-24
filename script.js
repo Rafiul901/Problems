@@ -1,9 +1,10 @@
-const button =document.getElementById("runBtn");
+function isPalindrome(word){
+    let reversed = word.split("").reverse().join("")
 
-button.addEventListener("mouseover",()=>{
-    const x =Math.random()*(window.innerWidth-button.clientWidth);
-    const y=Math.random()*(window.innerHeight -button.clientHeight);
-
-    button.style.left =`${x}px`;
-    button.style.top = `${y}px`;
-})
+    if( word === reversed){
+        return "Palindrome";
+    }else{
+        return "Not Palindrome"
+    }
+}
+console.log(isPalindrome("add"));
