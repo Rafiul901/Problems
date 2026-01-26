@@ -67,3 +67,20 @@ function getWordCount(sentence) {
 
 const wordCount = getWordCount("I love freeCodeCamp");
 console.log(`Word Count: ${wordCount}`);
+
+//Build a Factorial Calculator
+
+let num =5;
+
+function factorialCalculator(n){
+   let result =1;
+   
+   for(let i=1; i<=n;i++){
+     result=result*i;
+   }
+   return result;  
+}
+let factorial =factorialCalculator(num);
+let resultMsg =`Factorial of ${num} is ${factorial}`
+
+console.log(resultMsg)
