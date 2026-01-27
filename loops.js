@@ -84,3 +84,16 @@ let factorial =factorialCalculator(num);
 let resultMsg =`Factorial of ${num} is ${factorial}`
 
 console.log(resultMsg)
+
+//Chunk array
+
+function chunkArrayInGroups(arr,n){
+  let result =[];
+
+  for(let i=0; i<arr.length; i=i+n){
+    let chunk =arr.slice(i,i+n)
+    result.push(chunk)
+  }
+  return result;
+}
+
