@@ -92,7 +92,7 @@ function chunkArrayInGroups(arr,n){
 
   for(let i=0; i<arr.length; i=i+n){
     let chunk =arr.slice(i,i+n)
-    result.push(chunk)
+    
   }
   return result;
 }
