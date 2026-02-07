@@ -94,6 +94,6 @@ function chunkArrayInGroups(arr,n){
     let chunk =arr.slice(i,i+n)
     result.push(chunk)
   }
-  return result;
+  
 }
 
