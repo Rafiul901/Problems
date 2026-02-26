@@ -26,5 +26,15 @@ function findElement(arr,func){
     }
     return undefined
 }
-console.log(findElement([1, 3, 5, 8], num => num % 3 === 0));
+// console.log(findElement([1, 3, 5, 8], num => num % 3 === 0));
 
+//Implement the Slice and Splice Algorithm
+
+function spliceOf(arr1,arr2,i){
+    let result =arr2.slice();
+
+    result.splice(i,0,...arr1);
+
+    return result
+}
+console.log(spliceOf([1, 2, 3], [4, 5], 1));
