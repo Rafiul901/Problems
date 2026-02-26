@@ -15,6 +15,16 @@ for(let i=0; i<arr.length; i++){
 }
 return result
 }
-console.log(largestOfAll([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
+// console.log(largestOfAll([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
 
+///Build a First Element Finder
+function findElement(arr,func){
+    for(let i=0; i<arr.length; i++){
+        if(func(arr[i])){
+            return arr[i]
+        }
+    }
+    return undefined
+}
+console.log(findElement([1, 3, 5, 8], num => num % 3 === 0));
 
