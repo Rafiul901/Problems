@@ -47,7 +47,7 @@ function getAverage(scores){
     for(let score of scores){
         total +=score;
     }
-    return average = total/scores.length;
+    return total/scores.length;
 
 }
 
