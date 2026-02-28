@@ -37,4 +37,55 @@ function spliceOf(arr1,arr2,i){
 
     return result
 }
-console.log(spliceOf([1, 2, 3], [4, 5], 1));
+// console.log(spliceOf([1, 2, 3], [4, 5], 1));
+
+//Build a Gradebook App
+
+function getAverage(scores){
+    let total = 0;
+
+    for(let score of scores){
+        total +=score;
+    }
+    return average = total/scores.length;
+
+}
+
+function getGrade(score){
+    score= Number(score);
+if(score === 100){
+    return 'A+'
+}
+else if(score >=90){
+    return 'A'
+}
+else if(score >=80){
+    return 'B'
+}
+else if(score >=70){
+    return 'C'
+}
+else if(score >=60){
+    return 'D'
+}
+else return 'F'
+}
+
+function hasPassingGrade(score){
+    return getGrade(score) !== "F"
+}
+
+function studentMsg(scores,studentScore){
+    const average = getAverage(scores);
+    const grade = getGrade(studentScore);
+const passed = hasPassingGrade(studentScore);
+
+
+if (passed) 
+    { return `Class average: ${average}. Your grade: ${grade}. You passed the course.`;
+} else 
+    { return `Class average: ${average}. Your grade: ${grade}. You failed the course.`;
+ } 
+}
+
+console.log(studentMsg([15, 25, 35, 45, 55, 60, 70, 60], 75));
