@@ -99,3 +99,10 @@ function titleCase(str){
 }
 
 console.log(titleCase("I'm a little tea pot"))
+
+//Implement a Falsy Remover
+
+function bouncer(arr){
+    return arr.filter(Boolean)
+}
+console.log(bouncer([7, "ate", "", false, 9]));
