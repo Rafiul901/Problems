@@ -105,4 +105,19 @@ console.log(titleCase("I'm a little tea pot"))
 function bouncer(arr){
     return arr.filter(Boolean)
 }
-console.log(bouncer([7, "ate", "", false, 9]));
+// console.log(bouncer([7, "ate", "", false, 9]));
+
+
+//Implement a Unique Sorted Union
+function uniqueArray(...arrays){
+    let result =[]
+
+    for(let arr of arrays){
+        for(let value of arr){
+            if(!result.includes(value)){
+                result.push(value)
+            }
+        }
+    }
+    return result;
+}
