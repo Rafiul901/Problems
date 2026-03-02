@@ -88,4 +88,14 @@ if (passed)
  } 
 }
 
-console.log(studentMsg([15, 25, 35, 45, 55, 60, 70, 60], 75));
+// console.log(studentMsg([15, 25, 35, 45, 55, 60, 70, 60], 75));
+
+//Build a Title Case Converter
+ 
+function titleCase(str){
+  return str.split(" ").map(word =>
+    word[0].toUpperCase()+word.slice(1).toLowerCase()
+  ).join(' ')
+}
+
+console.log(titleCase("I'm a little tea pot"))
