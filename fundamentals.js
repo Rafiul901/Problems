@@ -98,7 +98,7 @@ function titleCase(str){
   ).join(' ')
 }
 
-console.log(titleCase("I'm a little tea pot"))
+// console.log(titleCase("I'm a little tea pot"))
 
 //Implement a Falsy Remover
 
@@ -121,3 +121,34 @@ function uniqueArray(...arrays){
     }
     return result;
 }
+
+//Password Generator
+
+function generatePass(n){
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*().";
+
+    let result ='';
+
+    for(let i=0; i<n; i++){
+let randomIndex =Math.floor(Math.random()*chars.length);
+
+result +=chars[randomIndex]
+    }
+
+    return result;
+}
+let password = generatePass(2);
+// console.log("generated pass: "+ password);
+
+//Design a Sum All Numbers Algorithm
+function sumAll(arr){
+    let min =Math.min(arr[0],arr[1]);
+    let max =Math.max(arr[0],arr[1]);
+
+    let sum =0;
+    for(let i=min; i<=max; i++){
+        sum +=i;
+    }
+    return sum
+}
+console.log(sumAll([1,4]));
