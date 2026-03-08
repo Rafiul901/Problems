@@ -83,3 +83,29 @@ function getTotalPages(books){
   return books.reduce((total,book)=>total+book.pages,0)
 }
 console.log(getTotalPages(library))
+
+//Build a Book Organizer
+const books = [
+  { title: "nice book", authorName: "George Orwell", releaseYear: 1949 },
+  { title: "To Kill a Mockingbird", authorName: "Harper Lee", releaseYear: 1960 },
+  { title: "The Hobbit", authorName: "J.R.R. Tolkien", releaseYear: 1937 },
+  { title: "Fahrenheit 451", authorName: "Ray Bradbury", releaseYear: 1953 }
+];
+
+function sortByYear(book1,book2){
+if(book1.releaseYear<book2.releaseYear){
+  return -1;
+}
+else if(book1.releaseYear>book2.releaseYear){
+  return 1;
+}
+else {
+  return 0;
+}
+}
+
+const filteredBooks =books.filter(book=>book.releaseYear<1950);
+filteredBooks.sort(sortByYear)
+
+console.log(filteredBooks);
+
