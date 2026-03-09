@@ -82,7 +82,7 @@ console.log("\nTotal number of pages for all library books:\n");
 function getTotalPages(books){
   return books.reduce((total,book)=>total+book.pages,0)
 }
-console.log(getTotalPages(library))
+
 
 //Build a Book Organizer
 const books = [
@@ -107,5 +107,28 @@ else {
 const filteredBooks =books.filter(book=>book.releaseYear<1950);
 filteredBooks.sort(sortByYear)
 
-console.log(filteredBooks);
+
+
+//Sorted Index Finder
+function indexFind(arr,n){
+  arr.sort((a,b)=>a-b);
+  const index =arr.findIndex(value=>value>=n);
+  return index===-1? arr.length:index;
+}
+// console.log(indexFind([1,2,3,4,5],2));
+
+//Symmetric Difference
+function diffArray(arr1,arr2){
+  const unique1 = arr1.filter(item => !arr2.includes(item));
+  const unique2 = arr2.filter(item => !arr1.includes(item));
+
+  return unique1.concat(unique2)
+}
+// console.log(diffArray(["pen", "book"], ["book", "pencil", "notebook"]));
+
+
+
+
+
+
 
